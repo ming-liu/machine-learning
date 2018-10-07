@@ -14,8 +14,12 @@ tags:
 Octave
 
 
-## glossaries ##
+prediction = X * theta
+prediction = sigoid (X * theta)
 
+## Glossaries ##
+
+#### Week 1 ####
 1. hypothesis
 2. theta
 3. parameter
@@ -41,3 +45,27 @@ Octave
 23. X' X prime
 24. resort ,resort to
 25. optimum
+
+
+#### Week 3 ####
+###### Classification and Representation ######
+1. discrete value,discrete-valued.
+2. generalize to. Most of what we say here will also generalize to the multiple-class case.
+3. denote. 0 is also called the negative class, and 1 the positive class, and they are sometimes also denoted by the symbols “-” and “+.”
+4. corresponding. Given x(i), the corresponding y(i)  is also called the label for the training example.
+5. sigmoid.
+6. logistic
+7. convex. convex function
+
+###### Solving the Problem of Overfitting ######
+1. leftmost.rightmost
+2. naive ,naively
+3. magnitude
+4. inflate
+5. fabrication,fabrication plant.
+
+#### Week 4 ####
+###### Neural Networks: Representation ######
+1. neural
+2. neuron
+3. mimic,mimicking
