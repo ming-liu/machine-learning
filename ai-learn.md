@@ -14,6 +14,14 @@ tags:
 Octave
 
 
+参考资料:
+
+https://www.cnblogs.com/charlotte77/p/5629865.html
+http://www.cnblogs.com/maybe2030/p/5597716.html
+https://www.zhihu.com/question/34681168
+
+
+
 prediction = X * theta
 prediction = sigoid (X * theta)
 
