@@ -25,6 +25,12 @@ https://www.zhihu.com/question/34681168
 prediction = X * theta
 prediction = sigoid (X * theta)
 
+
+
+SVM
+A large C parameter tells the SVM to try to classify all the examples correctly.
+
+
 ## Glossaries ##
 
 #### Week 1 ####
@@ -77,3 +83,17 @@ prediction = sigoid (X * theta)
 1. neural
 2. neuron
 3. mimic,mimicking
+
+
+#### Week 7 ####
+###### Support Vector Machines ######
+1. outlier .However there's an outlier on the far left.
+2. penalty.
+3. misclassify.
+
+
+#### Week 8 ####
+###### unsupervised learning ######
+1. centroid
+2. drop x(0)=1 convention
+3. local optima
