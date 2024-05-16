@@ -10,7 +10,8 @@
 7. 深度学习
 8. chatGPT
 9. 风控
-10. 推荐系统
+10. 最优化：建模、算法与理论/最优化计算方法
+11. 推荐系统
 
 Feature Scaling
 Mean normalization
