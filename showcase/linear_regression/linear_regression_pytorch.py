@@ -1,15 +1,9 @@
 import torch
 import random
 import matplotlib.pyplot as plt
+import util
 
-
-# 模拟数据，增加噪音
-def create_data(weights, bias, sigma, num_examples):
-    X = torch.normal(0, 1, (num_examples, len(weights)))
-    y = torch.matmul(X, weights) + bias
-    y += torch.normal(0, sigma, y.shape)
-    # (-1,1) -> from [1,2,3....] to [[1],[2],[3]...]
-    return X, y.reshape((-1, 1))
+# li mu 课程中抄过来的
 
 
 def linear_reg(X, weights, bias):
@@ -40,7 +34,7 @@ def sgd(params, lr, batch_size):
 # 1. create data
 w = torch.tensor([5, 3.8])
 b = 8.3
-features, labels = create_data(w, b, sigma=0.1, num_examples=1000)
+features, labels = util.create_data(w, b, sigma=0.1, num_examples=1000)
 print('features.shape=', features.shape, ';labels.shape=', labels.shape)
 
 plt.figure('Linear Regression')
@@ -64,10 +58,10 @@ batch_size = 100
 for epoch in range(num_epochs):
     for X, y in data_iter(batch_size=batch_size, features=features, labels=labels):
         # X和y的小批量损失
-        l = loss(net(X, w, b), y)
+        cost = loss(net(X, w, b), y)
         # 因为l形状是(batch_size,1)，而不是一个标量。l中的所有元素被加到一起，
         # 并以此计算关于[w,b]的梯度
-        l.sum().backward()
+        cost.sum().backward()
         sgd([w, b], lr, batch_size)  # 使用参数的梯度更新参数
 
     with torch.no_grad():
